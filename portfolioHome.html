@@ -3,46 +3,84 @@
     <head>
         <meta charset="utf-8">
         <meta name="description" content="This is my portfolio website web page">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>PavanLupane.portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PL.portfolio</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         
+        
         <style>
-           /* body{
-                background-image: url(res/skyline.jpg);
-                background-size: cover; 
-                height: 700px;  
-            }*/
-            .imageContainer{
-                background: url(res/skyline1.jpg) no-repeat center center fixed;
-                height: 800px; 
-                width: 1280px;
+            .firstPageDiv{
+                height: 800px;
+                width: 100%;
+                background: url(http://res.cloudinary.com/pavanlupane/image/upload/v1450772851/skyline1_zhyoyo.jpg) no-repeat center center fixed; 
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: cover;
-            }
-            #mainContainer{
-                padding: 0px;
-                margin-top: 10px;
-                margin: 0px;
-            }
-            #headerMenuBar{
+                        }
+            .menuClass{
+                width: 100%;
                 position: fixed;
-                left: 0;
-                right: 0;
-                height: 160px;
+            }
+            nav {
+                height: 170px;
+                width: 100%;
                 background-color:rgba(0,0,0,0.3);
-                z-index: 4;
+                font-size: 11pt;
+                font-family: 'PT Sans', Arial, sans-serif;
+                font-weight: bold;
+                position: relative;
+                padding-top: 65px;
             }
-            #menuDiv{
-                margin-top:60px;
-                color: white;
-                font-size: 15px;
+            nav ul {
+                padding: 0;
+                margin: 0 auto;
+                width: 600px;
+                height: 40px;
             }
+            nav li {
+                display: inline;
+                float: left;
+            }
+            .clearfix:before,
+            .clearfix:after {
+                content: " ";
+                display: table;
+            }
+            .clearfix:after {
+                clear: both;
+            }
+            .clearfix {
+                *zoom: 1;
+            }
+            nav a {
+                color: #fff;
+                display: inline-block;
+                width: 100px;
+                text-align: center;
+                text-decoration: none;
+                line-height: 40px;
+                /*text-shadow: 1px 1px 0px grey;*/
+            }
+            nav li a {
+                border-right: 1px solid white;
+                box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+            }
+            nav li:last-child a {
+                border-right: 0;
+            }
+            nav a:hover, nav a:active {
+                color: darkgrey;
+            }
+            nav a#pull {
+                display: none;
+            }
+            
             .myLogo{
                 width: 110px;
                 height: 110px;
@@ -57,74 +95,181 @@
                 -webkit-border-radius: 80px;
                 border-radius: 80px;
             }
-            hr{
-                margin: 0px;
+            .menuClass{
+             display: flex;   
             }
-            #myBio{
-                /*height: 800px;*/ 
-               
-                width: 1280px;
-                background: #404040;
-                padding-top: 160px;
-                color: white;
+            .navDiv{
+                padding: 0;
+                flex: 1;
+                border-bottom: 2px solid #283744;
             }
-            /*#myImage1{
-                position: relative;
-                height: 600px;
-                width: 450px;
-                border:2px solid white;
-               z-index: 1;
-                margin-left: 20px;
-            }*/
-            #myImage1{
-               /* position: relative;*/
-                width: 450px;
-                border:2px solid white;
-                /*z-index: 2;*/
-                max-width: 100%;
-                height: auto;
-                display: block;
+            .logoDivWrapper{
+                background-color:rgba(0,0,0,0.3);
+                border-bottom: 2px solid #283744;
             }
-            #aboutMeText{
-                padding-top: 100px;
-                font-size: 35px;
-                margin: 0px;
+            .logoDiv{
+                padding-right: 0;
+                
+                width: 200px;
+                padding-left: 40px;
+                
             }
-            #amTitle{
-                font-size: 22px;
-                margin-top: 0px;
+            /**********Start of media query**********/
+            
+            @media screen and (max-width: 800px) {
+                .firstPageDiv{
+                    height: 560px;
+                    width: 100%;
+                }
+                nav { 
+                    height: auto;
+                    padding-top: 0;
+                }
+                nav ul {
+                    width: 100%;
+                    display: block;
+                    height: auto;
+                }
+                nav li {
+                    width: 50%;
+                    float: left;
+                    position: relative;
+                }
+                nav li a {
+                    border-bottom: 1px solid #576979;
+                    border-right: 1px solid #576979;
+                }
+                nav a {
+                    text-align: left;
+                    width: 100%;
+                    text-indent: 25px;
+                }
+                .menuClass{
+                     display: flex;
+                     flex-direction: column;
+                    }
+                .navDiv{
+                    padding: 0;
+                    width: 100%;
+                    
+                }
+                .logoDiv{
+                    height: 145px;
+                    width: 100%;
+                    position: relative;
+                    left: 41%;
+                    float: left;
+                    padding-left:0;
+                }
+                .myLogo{
+                        width: 90px;
+                        height: 90px;
+                        margin-left: 25px;
+                        margin-top: 25px;
+                    }
+                    #circle {
+                        width: 140px;
+                        height: 140px;
+                        background: white;
+                        -moz-border-radius: 70px;
+                        -webkit-border-radius: 70px;
+                        border-radius: 70px;
+                    }
             }
+            @media only screen and (max-width : 480px) {
+                .firstPageDiv{
+                    height: 560px;
+                    width: 100%;
+                }
+                nav {
+                    border-bottom: 0;
+                    padding-top: 0;
+                }
+                nav ul {
+                    display: none;
+                    height: auto;
+                }
+                nav a#pull {
+                    display: block;
+                    background-color:rgba(0,0,0,0.3);
+                    width: 100%;
+                    position: relative;
+                }
+                nav a#pull:after {
+                    content:"";
+                    /*background: url(res/nav-icon.png) no-repeat;*/
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    position: absolute;
+                    right: 15px;
+                    top: 10px;
+                }
+                .myLogo{
+                        width: 70px;
+                        height: 70px;
+                        margin-left: 15px;
+                        margin-top: 15px;
+                    }
+                    #circle {
+                        width: 100px;
+                        height: 100px;
+                        background: white;
+                        -moz-border-radius: 50px;
+                        -webkit-border-radius: 50px;
+                        border-radius: 50px;
+                    }
+                 .logoDiv{
+                    height: 105px;
+                    width: 100%;
+                    margin: auto;
+                    position: relative;
+                    left: 37%;
+                    float: left;
+                    padding-left:0;
+                }
+            }
+            @media only screen and (max-width : 320px) {
+                nav li {
+                    display: block;
+                    float: none;
+                    width: 100%;
+                }
+                nav li a {
+                    border-bottom: 1px solid white;
+                }
+            }
+            
         </style>
     </head>
     <body>
-        <div class="container" id="mainContainer">
-            <div class="imageContainer">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="headerMenuBar">
-                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" id="logoDiv">
-                        <a href="#myBio"><p id="circle">
-                            <img class="myLogo" src="res/logo%20small.jpg">
+        <div class="firstPageDiv">
+            <div class="menuClass">  
+                <div class="logoDivWrapper">
+                    <div class="logoDiv" id="logoDiv">
+                        <a href="#secondPage"><p id="circle">
+                            <img class="myLogo" src="http://res.cloudinary.com/pavanlupane/image/upload/v1450773161/logoSmall_ddwpvi.jpg">
                         </p></a>
                     </div>
-                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12" id="menuDiv">
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">EDUCATION</div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">PROJECTS</div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">WORK</div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">SKILLS</div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">TRAVEL</div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">CONTACT ME</div>
-                    </div>
-                </div>   
-            </div>
-            <hr>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="myBio">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="aboutMeLeft" style="text-align: center;">
-                    <img src="res/pavanlupane1.jpg" class="img-responsive" id="myImage1">
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="aboutMeRight">
-                        <p id="aboutMeText">About me</p><br>
-                    <p id="amTitle"><span>Graduate Student</span><span style="padding-left: 10px; padding-right: 10px;"> | </span><span>Technology Enthusiast</span></p>
+                <div class="navDiv" id="navDiv">
+                <nav class="clearfix">
+                        <ul class="clearfix">
+                            <li><a href="#secondPage">EDUCATION</a></li>
+                            <li><a href="#">PROJECTS</a></li>
+                            <li><a href="#">WORK</a></li>
+                            <li><a href="#">SKILLS</a></li>
+                            <li><a href="#">TRAVEL</a></li>
+                            <li><a href="#">CONTACT ME</a></li>  
+                        </ul>
+                        <a href="#" id="pull">Menu</a>
+                </nav>
                 </div>
             </div>
+        </div> 
+        <div class="secondPage" id="secondPage">
+        
         </div>
     </body>
+    <script src="script.js"></script>
 </html>

@@ -21,6 +21,42 @@
                 -o-background-size: cover;
                 background-size: cover;
                         }
+            .aboutMeDiv{
+                height: 850px;
+                width: 100%;
+                background-color: #404040;
+                padding-top: 177px;
+                text-align: center;
+            }
+            .headerAboutME{
+                font-size: 35px;
+                font-family: 'PT Sans', Arial, sans-serif;
+                color: white;
+                padding: 0;
+                line-height: 35px;
+            }
+            .aboutMeContent{
+                display: flex;
+            }
+            .aboutMeLeft{
+                width: 40%;
+                padding-top: 20px;
+                
+            }
+            .aboutMeRight{
+                flex: 1;
+                font-size: 20px;
+                font-family: 'PT Sans', Arial, sans-serif;
+                color: white;
+                padding-top: 100px;
+                padding-right: 20px;
+                line-height: 35px;
+                text-align: justify;
+            }
+            #myAboutMeImage{
+                height: 530px;
+                width: 410px;;
+            }
             .menuClass{
                 width: 100%;
                 position: fixed;
@@ -115,8 +151,73 @@
                 
             }
             /**********Start of media query**********/
+            @media screen and (max-width: 1130px){
+                .aboutMeLeft{
+                width: 40%;
+                padding-top: 20px;
+                
+            }
+            .aboutMeRight{
+                flex: 1;
+                font-size: 15px;
+            }
+            #myAboutMeImage{
+                height: 500px;
+                width: 380px;;
+            }
+            }
+            
+            @media screen and (max-width: 1000px){
+            .aboutMeDiv{
+                height: 1100px;
+                width: 100%;
+            }
+            .aboutMeContent{
+                display: flex;
+                flex-direction: column;
+            }
+            .aboutMeLeft{
+                width: 100%;
+                padding-top: 20px;
+                
+            }
+            .aboutMeRight{
+                flex: 1;
+                padding-top: 20px;
+                padding-right: 20px;
+                padding-left: 20px;
+                text-align: center;
+            }  
+            }
+            
             
             @media screen and (max-width: 800px) {
+            .aboutMeDiv{
+                height: 1230px;
+                width: 100%;
+                padding-top: 275px;
+                text-align: center;
+            }
+            .headerAboutME{
+                font-size: 25px;
+            }
+            .aboutMeContent{
+                display: flex;
+                flex-direction: column;
+            }
+            .aboutMeLeft{
+                width: 100%;
+                padding-top: 20px;
+                
+            }
+            .aboutMeRight{
+                flex: 1;
+                font-size: 14px;
+            }
+            #myAboutMeImage{
+                height: 480px;
+                width: 360px;;
+            }
                 .firstPageDiv{
                     height: 560px;
                     width: 100%;
@@ -136,8 +237,8 @@
                     position: relative;
                 }
                 nav li a {
-                    border-bottom: 1px solid #576979;
-                    border-right: 1px solid #576979;
+                    border-bottom: 1px solid white;
+                    border-right: 1px solid white;
                 }
                 nav a {
                     text-align: left;
@@ -176,7 +277,16 @@
                         border-radius: 70px;
                     }
             }
-            @media only screen and (max-width : 480px) {
+            @media only screen and (max-width : 600px) {
+                .aboutMeDiv{
+                    height: 1250px;
+                    width: 100%;
+                    padding-top: 155px;
+                    text-align: center;
+                }
+                .headerAboutME{
+                    font-size: 20px;
+                }
                 .firstPageDiv{
                     height: 560px;
                     width: 100%;
@@ -247,7 +357,7 @@
             <div class="menuClass">  
                 <div class="logoDivWrapper">
                     <div class="logoDiv" id="logoDiv">
-                        <a href="#secondPage"><p id="circle">
+                        <a href="#aboutMeDiv"><p id="circle">
                             <img class="myLogo" src="http://res.cloudinary.com/pavanlupane/image/upload/v1450773161/logoSmall_ddwpvi.jpg">
                         </p></a>
                     </div>
@@ -267,8 +377,24 @@
                 </div>
             </div>
         </div> 
-        <div class="secondPage" id="secondPage">
-        
+        <div class="aboutMeDiv" id="aboutMeDiv">
+            <div class="mainContainerAboutMe" id="mainContainerAboutMe">
+                <div class="headerAboutME" id="headerAboutME">
+                    <p>Pavan Rajaram Lupane</p>
+                    <p style="font-size:15px">Graduate Student<span style="padding-left: 10px; padding-right:10px;">|</span>Technology Enthusiast<span style="padding-left: 10px; padding-right:10px;">|</span>Avid Traveler</p>
+                </div>
+                <div class="aboutMeContent" id="aboutMeContent">
+                    <div class="aboutMeLeft" id="aboutMeLeft">
+                        <img id="myAboutMeImage" src="res/pavanLupane1.jpg">
+                    </div>
+                    <div class="aboutMeRight" id="aboutMeRight">
+                        <p>
+                            I am a graduate student at<!--span style="color: #BD2031"--> University of Southern California<!--/span--> majoring in Computer Science. I have 2 years of industrial experience and 5+ years of experience working with various computer technologies. I enjoy problem solving and apply those techniques to build technology solutions. My areas of interest include Data Science, Web Technologies and advanced web based applications.</p>
+                        <p style="padding-top:10px;">I love to travel, meet new people and network. Besides this, I enjoy pop-rock and country music.</p>
+                        <p style="text-align:center; padding-top:25px;"><button type="button" class="btn btn-default">Download my Résumé</button></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     <script src="script.js"></script>

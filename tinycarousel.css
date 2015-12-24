@@ -1,0 +1,109 @@
+/* Tiny Carousel */
+#slider1 {
+    height: 500px;
+    margin: 20px 0 0;
+    overflow: hidden;
+    position: relative;
+    padding: 0 100px 10px;
+    
+    
+}
+
+#slider1 .viewport {
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider1 .buttons {
+    background: rgba(0,0,0,0.3);
+    border-radius: 35px;
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 42px;
+    padding-top: 11px;
+}
+
+#slider1 .next {
+    right: 0;
+    left: auto;
+    top: 25%;
+}
+
+#slider1 .buttons:hover {
+    color: #404040;
+    background: #fff;
+}
+
+#slider1 .disable {
+    visibility: hidden;
+}
+
+#slider1 .overview {
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 240px;
+    left: 0;
+    top: 0;
+}
+
+#slider1 .overview li {
+    float: left;
+    margin: 0 50px 0 0;
+    text-align: center;
+    padding-top: 50px;
+    height: 450px;
+   /*border: 1px solid #dcdcdc;*/
+    width: 500px;
+ }
+@media screen and (max-width: 1200px){
+    #slider1 .overview li {
+    margin: 0 30px 0 0;
+    width: 400px;
+ }
+@media screen and (max-width: 965px){
+    #slider1 .overview li {
+    margin: 0 25px 0 0;
+    width: 760px;
+ }
+@media screen and (max-width: 800px){
+    #slider1 .overview li {
+    margin: 0 25px 0 0;
+    width: 500px;
+ }
+@media screen and (max-width: 600px){
+    #slider1 .overview li {
+    margin: 0 20px 0 0;
+    width: 400px;
+ }
+@media screen and (max-width: 545px){
+    #slider1 .overview li {
+    margin: 0 20px 0 0;
+    width: 300px;
+ }
+@media screen and (max-width: 500px){
+    #slider1 .overview li {
+    margin: 0 20px 0 0;
+    width: 180px;
+ }
+    #slider1 .buttons {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 35%;
+    line-height: 25px;
+    font-size: 32px;
+    padding-top: 7px;
+}
+}

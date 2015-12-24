@@ -8,12 +8,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="tinycarousel.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#slider1').tinycarousel();
+		});
+	   </script>
         
         
         <style>
             .firstPageDiv{
-                height: 800px;
+                height: 100vh;
                 width: 100%;
                 background: url(http://res.cloudinary.com/pavanlupane/image/upload/v1450772851/skyline1_zhyoyo.jpg) no-repeat center center fixed; 
                 -webkit-background-size: cover;
@@ -23,6 +30,7 @@
                         }
             .aboutMeDiv{
                 height: 850px;
+                /*height: 120vh;*/
                 width: 100%;
                 background-color: #404040;
                 padding-top: 177px;
@@ -60,6 +68,7 @@
             .menuClass{
                 width: 100%;
                 position: fixed;
+                z-index: 999;
             }
             nav {
                 height: 170px;
@@ -150,6 +159,35 @@
                 padding-left: 40px;
                 
             }
+            .educationDiv{
+                /*height: 100vh;*/
+                height: 760px;
+                width: 100%;
+                position: relative;
+                background-color: #404040;
+                padding-top: 177px; 
+                font-family: 'PT Sans', Arial, sans-serif;
+                color: white;
+                
+            }
+            .overview li img{
+                height:230px; width:230px;
+                border: 5px solid white;
+                
+            }
+            
+            .univHead{
+                padding-top: 30px;
+                font-size: 25px;
+            }
+            .univDetails{
+                padding-top: 5px;
+                font-size: 17px;
+            }
+            .univYears{
+                padding: 3px;
+                font-size: 15px;
+            }
             /**********Start of media query**********/
             @media screen and (max-width: 1130px){
                 .aboutMeLeft{
@@ -169,7 +207,8 @@
             
             @media screen and (max-width: 1000px){
             .aboutMeDiv{
-                height: 1100px;
+                /*height: 1100px;*/
+                height: 185vh;
                 width: 100%;
             }
             .aboutMeContent{
@@ -192,8 +231,31 @@
             
             
             @media screen and (max-width: 800px) {
+            .educationDiv{
+                height: 850px;
+                padding-top: 275px;
+            }
+            .overview li img{
+                height: 185px; 
+                width: 185px;
+                border: 5px solid white;
+            }
+
+            .univHead{
+                padding-top: 20px;
+                font-size: 20px;
+            }
+            .univDetails{
+                padding-top: 5px;
+                font-size: 15px;
+            }
+            .univYears{
+                padding: 3px;
+                font-size: 13px;
+            }
             .aboutMeDiv{
-                height: 1230px;
+                /*height: 1230px;*/
+                height: 215vh;
                 width: 100%;
                 padding-top: 275px;
                 text-align: center;
@@ -278,8 +340,32 @@
                     }
             }
             @media only screen and (max-width : 600px) {
+                .educationDiv{
+                    height: 750px;
+                    padding-top: 155px;
+                }
+                .overview li img{
+                    height: 170px; 
+                    width: 170px;
+                    border: 5px solid white;
+                }
+
+                .univHead{
+                    padding-top: 20px;
+                    font-size: 20px;
+                }
+                .univDetails{
+                    padding-top: 5px;
+                    font-size: 15px;
+                }
+                .univYears{
+                    padding: 3px;
+                    font-size: 13px;
+                }
+                
                 .aboutMeDiv{
-                    height: 1250px;
+                    /*height: 1250px;*/
+                    height: 210vh;
                     width: 100%;
                     padding-top: 155px;
                     text-align: center;
@@ -365,13 +451,13 @@
                 <div class="navDiv" id="navDiv">
                 <nav class="clearfix">
                         <ul class="clearfix">
-                            <li><a href="#secondPage">EDUCATION</a></li>
-                            <li><a href="#">PROJECTS</a></li>
+                            <li><a href="#educationDiv">EDUCATION</a></li>
+                            <li><a href="#educationDiv">PROJECTS</a></li>
                             <li><a href="#">WORK</a></li>
                             <li><a href="#">SKILLS</a></li>
                             <li><a href="#">TRAVEL</a></li>
                             <li><a href="#">CONTACT ME</a></li>  
-                        </ul>
+                    </ul>
                         <a href="#" id="pull">Menu</a>
                 </nav>
                 </div>
@@ -396,6 +482,23 @@
                 </div>
             </div>
         </div>
+        <hr>
+        <div class="educationDiv" id="educationDiv">
+            <span style="text-align: center"><h1>Education</h1></span>
+           <div id="slider1">
+               <a class="buttons prev" href="#">&#60;</a>
+		<div class="viewport">
+			<ul class="overview">
+                <li><img src="http://res.cloudinary.com/pavanlupane/image/upload/v1450959223/uscSeal_skkqae.jpg" /><p class="univHead">University Of Southern California</p><p class="univDetails">Masters in Computer Science</p><p class="univYears">2015 - 2017</p></li>
+				<li><img src="http://res.cloudinary.com/pavanlupane/image/upload/v1450959140/puseal_iuheh2.jpg" /><p class="univHead">Pune University</p><p class="univDetails">Bachelor of Computer Engineering</p><p class="univYears">2009 - 2013</p></li>
+                <li><img src="http://res.cloudinary.com/pavanlupane/image/upload/v1450959176/BVPSeal_xzclmn.png" /><p class="univHead">Bharati Vidyapeeth University</p><p class="univDetails">High School Diploma in Science</p><p class="univYears">2007 - 2009</p></li>
+				<li><img src="http://res.cloudinary.com/pavanlupane/image/upload/v1450959098/PESF_car9eo.jpg" /><p class="univHead">Purushottam English School</p><p class="univDetails">Secondary School</p><p class="univYears">2001 - 2007</p></li>
+			</ul>
+		</div>
+		<a class="buttons next" href="#">&#62;</a>
+	</div> 
+        </div>
     </body>
     <script src="script.js"></script>
+    <script src="jquery.tinycarousel.js"></script>
 </html>

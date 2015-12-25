@@ -188,6 +188,58 @@
                 padding: 3px;
                 font-size: 15px;
             }
+             .projectDiv{
+                /*height: 100vh;*/
+                height: 100vh;
+                width: 100%;
+                padding-top: 177px; 
+                text-align: center;
+                background-color: #404040;
+                font-family: 'PT Sans', Arial, sans-serif;
+                color: white;
+            }
+            .projectContainer{
+                padding: 20px 20px 20px 20px; 
+            }
+            #projectContent{
+                /*border: 1px solid white;*/
+                text-align: center;
+                height: 200px;
+                padding: 0px;
+                
+            }
+            .myBtn{
+                background :rgba(0,0,0,0.3);
+                height: 170px;
+                width: 500px;
+                margin-top: 15px;
+            }
+            .myBtn:active{
+                border: 1px solid white;
+            }
+            .projectName{
+                font-size: 35px;
+                font-weight: bold;
+            }
+            .projectDesc{
+                font-size: 20px;
+            }
+            .projectTech{
+                font-size: 17px;
+                font-weight: bold;
+            }
+            .modal{
+                color: #404040;
+            }
+            .modalImg{
+                height: 100px;
+                width: 100px;
+                margin-top: 20px;
+            }
+            .modal ul li{
+                text-align: left;
+                font-size: 15px;
+            }
             /**********Start of media query**********/
             @media screen and (max-width: 1130px){
                 .aboutMeLeft{
@@ -203,9 +255,32 @@
                 height: 500px;
                 width: 380px;;
             }
+            
+            .myBtn{
+                background :rgba(0,0,0,0.3);
+                height: 140px;
+                width: 450px;
+                margin-top: 15px;
+            }
+            
+            .projectName{
+                font-size: 30px;
+            }
+            .projectDesc{
+                font-size: 17px;
+            }
+            .projectTech{
+                font-size: 15px;
+                font-weight: bold;
+            }
+            
             }
             
             @media screen and (max-width: 1000px){
+            .projectDiv{
+                /*height: 100vh;*/
+                height: 100vh;
+                }
             .aboutMeDiv{
                 /*height: 1100px;*/
                 height: 185vh;
@@ -226,11 +301,60 @@
                 padding-right: 20px;
                 padding-left: 20px;
                 text-align: center;
-            }  
+            } 
+             #projectContent{
+                /*border: 1px solid white;*/
+                text-align: center;
+                height: 150px;
+                
+            }
+            .myBtn{
+                background :rgba(0,0,0,0.3);
+                height: 110px;
+                width: 365px;
+                margin-top: 15px;
+            }
+            
+            .projectName{
+                font-size: 25px;
+            }
+            .projectDesc{
+                font-size: 15px;
+            }
+            .projectTech{
+                font-size: 13px;
+                font-weight: bold;
+            }
+                
             }
             
             
             @media screen and (max-width: 800px) {
+            .projectDiv{
+                height: 1000px;;
+                  padding-top: 275px;  
+            }  
+            .myBtn{
+                width: 350px;  
+            }
+            .projectName{
+                font-size: 20px;
+            }
+            .projectDesc{
+                font-size: 15px;
+            }
+            .projectTech{
+                font-size: 13px;
+                font-weight: bold;
+            }
+            .modal ul li{
+                 font-size: 12px;   
+            }
+            .modalImg{
+                height: 70px;
+                width: 70px;
+                margin-top: 10px;
+            }
             .educationDiv{
                 height: 850px;
                 padding-top: 275px;
@@ -452,7 +576,7 @@
                 <nav class="clearfix">
                         <ul class="clearfix">
                             <li><a href="#educationDiv">EDUCATION</a></li>
-                            <li><a href="#educationDiv">PROJECTS</a></li>
+                            <li><a href="#projectDiv">PROJECTS</a></li>
                             <li><a href="#">WORK</a></li>
                             <li><a href="#">SKILLS</a></li>
                             <li><a href="#">TRAVEL</a></li>
@@ -497,6 +621,148 @@
 		</div>
 		<a class="buttons next" href="#">&#62;</a>
 	</div> 
+        </div>
+        <hr>
+        <div class="projectDiv" id="projectDiv">
+            <p><h1>Projects</h1></p>
+            <div class="projectContainer" id="projectContainer">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="projectContent">
+                    <button type="button" class="myBtn btn-lg" data-toggle="modal" data-target="#myModal1">
+                        <p class="projectName">Hawaman.IO</p>
+                        <p class="projectDesc">Android weather forecast application</p>
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title projectName" id="myModalLabel">Hawaman.IO</h3>
+                            <span>November 2015 – December 2015</span>
+                          </div>
+                          <div class="modal-body">
+                              <p class="projectDesc">An android weather forecast application</p>
+                              <p class="projectTech">Technologies: Android, Java, php, JSON</p>
+                              <ul>
+                                <li>a weather forecast android application that gives current and future weather information</li>
+                                <li>different activities that hosts more details about next 24 hours and next 7 days</li>
+                                <li>Google Map has been integrated in the application. AERIS weather APIs have been used to overlay weather information on top of Google Maps</li>
+                                <li>Facebook share button has been integrated in result activity that enables users to login to the facebook account and share the result on the wall</li>
+                              </ul>
+                              <p><a href="https://github.com/pavanlupane/AndroidHawaman.io" data-toggle="tooltip" data-placement="bottom" title="Click for source code"><img class="modalImg" src="http://res.cloudinary.com/pavanlupane/image/upload/v1451038086/Github3_a5rcjq.png"></a></p>
+                              <p>GitHub</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="projectContent">
+                     <button type="button" class="myBtn btn-lg" data-toggle="modal" data-target="#myModal2">
+                        <p class="projectName">Forecast Search Website</p>
+                        <p class="projectDesc">Responsive design</p>
+                     </button>
+                         
+                         <!-- Modal -->
+                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title projectName" id="myModalLabel">Forecast Search Website</h3>
+                            <span>October 2015 – November 2015</span>
+                          </div>
+                          <div class="modal-body">
+                              <p class="projectDesc">Responsive design for Weather forecast</p>
+                              <p class="projectTech">Technologies: HTML5/CSS3, Bootstrap, JavaScript, jQuery, PHP, JSON, Amazon EC2</p>
+                              <ul>
+                                <li>A Weather Forecast Search Website that provides weather details for a requested city in united states</li>
+                                <li>The results section gives 3 tabs for current, next 24 hours and next 7 days weather forecast information (Default tab shows current details)</li>
+                                <li>Website also integrates a map with the use of OpenWeatherMap OpenLayers.js library which helps to create the cloud map</li>
+                                <li>Facebook share functionality enables to share the result on facebook</li>
+                                <li>The website has been designed to be responsive to the screen sizes keeping "mobile first" concept in mind</li>
+                              </ul>
+                              <p><a href="https://github.com/pavanlupane/ForecastWebSearch" data-toggle="tooltip" data-placement="bottom" title="Click for source code"><img class="modalImg" src="http://res.cloudinary.com/pavanlupane/image/upload/v1451038086/Github3_a5rcjq.png"></a></p>
+                              <p>GitHub</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="projectContent">
+                     <button type="button" class="myBtn btn-lg" data-toggle="modal" data-target="#myModal3">
+                        <p class="projectName">Group Authentication Scheme</p>
+                        <p class="projectDesc">Final year project</p>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title projectName" id="myModalLabel">Group Authentication Scheme</h3>
+                            <span>September 2012 – July 2013</span>
+                          </div>
+                          <div class="modal-body">
+                              <p class="projectDesc">Group Authentication for Ubiquitous Devices</p>
+                              <p class="projectTech">Concepts: Internet of Things, Threshold cryptosystem and Group Authentication</p>
+                              <ul>
+                                <li>Developed and implemented a new group authentication mechanism using threshold cryptography to improve the security in group oriented applications of the Internet of Things</li>
+                                <li>Improved the speed of authentication by 25% as compared conventional authentication ensuring all security measures are satisfied</li>
+                                <li>Published and presented a paper titled “Group Authentication Using Pailier Threshold Cryptography” in an IEEE conference</li>
+                              </ul>
+                              <p><a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6616195&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel7%2F6589213%2F6616171%2F06616195.pdf%3Farnumber%3D6616195" data-toggle="tooltip" data-placement="bottom" title="Click for IEEE paper"><img class="modalImg" src="http://res.cloudinary.com/pavanlupane/image/upload/v1451038160/ieee_zm4h9s.png"></a></p>
+                              <p>IEEE Paper</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="projectContent">
+                     <button type="button" class="myBtn btn-lg" data-toggle="modal" data-target="#myModal4">
+                        <p class="projectName">Portfolio.me</p>
+                        <p class="projectDesc">Personal portfolio website</p>
+                    </button>
+                    
+                     <!-- Modal -->
+                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title projectName" id="myModalLabel">Portfolio.me</h3>
+                            <span>December 2015</span>
+                          </div>
+                          <div class="modal-body">
+                              <p class="projectDesc">Personal portfolio website - Responsive Design</p>
+                              <p class="projectTech">Concepts: HTML, CSS Media Queries , Bootstrap, JavaScript, jQuery, PHP</p>
+                              <ul>
+                                <li>A personal portfolio website</li>
+                                <li>Use of CSS Media Queries for responsive design</li>
+                                <li>Use of Bootstrap framework for frontend transition effects</li>
+                                <li>Facebook functionality integrated</li>
+                              </ul>
+                              <p><a href="https://github.com/pavanlupane/portfolio.me" data-toggle="tooltip" data-placement="bottom" title="Click for source code"><img class="modalImg" src="http://res.cloudinary.com/pavanlupane/image/upload/v1451038086/Github3_a5rcjq.png"></a></p>
+                              <p>Github</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     <script src="script.js"></script>

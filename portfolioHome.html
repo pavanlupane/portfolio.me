@@ -240,6 +240,57 @@
                 text-align: left;
                 font-size: 15px;
             }
+            .workDiv{
+                height: 100vh;
+                width: 100%;
+                padding-top: 177px; 
+                text-align: center;
+                background-color: #404040;
+                font-family: 'PT Sans', Arial, sans-serif;
+                color: white;
+            }
+            .workDivContainer{
+               padding-top: 20px; 
+            }
+            .barclaysContainer{
+                display: flex;   
+            }
+            .empName{
+                /*border: 1px solid white;*/
+                height: 150px;
+                width: 35%;
+            }
+            .empDesc{
+                flex: 1;
+                /*border: 1px solid white;*/
+                height: 320px;
+                text-align: left;
+            }
+            .empDesc ul li{
+                font-size: 20px;
+            }
+            .empDesc ul #technologySpan{
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .empDesc ul ul.workInfo li{
+                font-size: 15px;
+            }
+            .empName img.workImg{
+                height:40px;
+                width: 270px;
+                margin-top:10px;
+            }
+            .empName #workName{
+                font-size: 22px;
+                font-weight: bold;
+            }
+            .empName #workRole{
+                font-size:17px;
+            }
+            .empName #workDate{
+                font-size:14px;
+            }
             /**********Start of media query**********/
             @media screen and (max-width: 1130px){
                 .aboutMeLeft{
@@ -277,6 +328,19 @@
             }
             
             @media screen and (max-width: 1000px){
+            
+            .barclaysContainer{
+                display: flex;  
+                flex-direction: column;
+            }
+            .empName{
+                height: 150px;
+                width: 100%;
+            }
+            .empDesc{
+                flex: 1;
+                height: 330px;
+            }
             .projectDiv{
                 /*height: 100vh;*/
                 height: 100vh;
@@ -328,10 +392,32 @@
                 
             }
             
-            
             @media screen and (max-width: 800px) {
+
+            .empName img.workImg{
+                height:37px;
+                width: 250px;
+                margin-top:10px;
+            }
+            .empName #workName{
+                font-size: 19px;
+                font-weight: bold;
+            }
+            .empName #workRole{
+                font-size:15px;
+            }
+            .empName #workDate{
+                font-size:13px;
+            }
+            .workDiv{
+                padding-top: 275px;  
+                height: 120vh;
+                }
+            .empDesc{
+                height: 355px;
+            }    
             .projectDiv{
-                height: 1000px;;
+                height: 1000px;
                   padding-top: 275px;  
             }  
             .myBtn{
@@ -464,6 +550,41 @@
                     }
             }
             @media only screen and (max-width : 600px) {
+                
+                 .empName img.workImg{
+                    height:35px;
+                    width: 220px;
+                    margin-top:10px;
+                }
+                .empName #workName{
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                .empName #workRole{
+                    font-size:14px;
+                }
+                .empName #workDate{
+                    font-size:12px;
+                }
+
+                .workDiv{
+                    height: 900px;
+                    padding-top: 145px;
+                }
+                .empDesc{
+                    height: 460px;
+                    padding-right: 10px;
+                }
+                .empDesc ul li{
+                    font-size: 17px;
+                }
+                .empDesc ul #technologySpan{
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+                .empDesc ul ul.workInfo li{
+                    font-size: 14px;
+                }
                 .educationDiv{
                     height: 750px;
                     padding-top: 155px;
@@ -577,7 +698,7 @@
                         <ul class="clearfix">
                             <li><a href="#educationDiv">EDUCATION</a></li>
                             <li><a href="#projectDiv">PROJECTS</a></li>
-                            <li><a href="#">WORK</a></li>
+                            <li><a href="#workDiv">WORK</a></li>
                             <li><a href="#">SKILLS</a></li>
                             <li><a href="#">TRAVEL</a></li>
                             <li><a href="#">CONTACT ME</a></li>  
@@ -614,7 +735,7 @@
 		<div class="viewport">
 			<ul class="overview">
                 <li><img src="http://res.cloudinary.com/pavanlupane/image/upload/v1450959223/uscSeal_skkqae.jpg" /><p class="univHead">University Of Southern California</p><p class="univDetails">Masters in Computer Science</p><p class="univYears">2015 - 2017</p></li>
-				<li><img src="http://res.cloudinary.com/pavanlupane/image/upload/v1450959140/puseal_iuheh2.jpg" /><p class="univHead">Pune University</p><p class="univDetails">Bachelor of Computer Engineering</p><p class="univYears">2009 - 2013</p></li>
+				<li><img src="http://res.cloudinary.com/pavanlupane/image/upload/v1450959140/puseal_iuheh2.jpg" /><p class="univHead">University of Pune</p><p class="univDetails">Bachelor of Computer Engineering</p><p class="univYears">2009 - 2013</p></li>
                 <li><img src="http://res.cloudinary.com/pavanlupane/image/upload/v1450959176/BVPSeal_xzclmn.png" /><p class="univHead">Bharati Vidyapeeth University</p><p class="univDetails">High School Diploma in Science</p><p class="univYears">2007 - 2009</p></li>
 				<li><img src="http://res.cloudinary.com/pavanlupane/image/upload/v1450959098/PESF_car9eo.jpg" /><p class="univHead">Purushottam English School</p><p class="univDetails">Secondary School</p><p class="univYears">2001 - 2007</p></li>
 			</ul>
@@ -763,6 +884,47 @@
                     </div>
                 </div>
             </div>
+        </div><hr>
+        <div class="workDiv" id="workDiv">
+            <div class="workDivContainer" id="workDivContainer">
+                <div class="barclaysContainer" id="barclaysContainer">
+                    <div class="empName" id="empName">
+                        <p>
+                            <img src="http://res.cloudinary.com/pavanlupane/image/upload/v1451084783/barcs_bprsru.png" class="workImg"><br>
+                            <span id="workName" >Barclays Investment Bank</span><br>
+                            <span id="workRole">Java Application Developer</span><br>
+                            <p id="workDate" >August 2013 - July 2015</p>
+                        </p>  
+                    </div>
+                    <div class="empDesc" id="empDesc">
+                        <p>
+                            <ul>
+                                <li>Post Trade Equities Platform - MOCHA</li>
+                                <p><span id="technologySpan">Technologies and Tools : Java (multithreading), MySQL, Maven, TeamCity and TortoiseSVN</span></p>
+                                <p>
+                                    <ul class="workInfo">
+                                        <li>Developed and maintained data sourcing component called DataCite</li>
+                                        <li>Client-Server architecture with caching mechanism (LFU)</li>
+                                        <li>Test case automation using TestNG and JUnit</li>
+                                        <li>Worked on continuous integration tool to automate project builds, test suits and deployment using TeamCity</li>
+                                        <li>SDLC: Agile Methodology</li>
+                                        <li>Domain Knowledge: Equities, Deriavtives and Options, Cross-Currency Swaps, Trade Life Cycle</li>
+                                    </ul>
+                                </p>
+                                <li>Corporate Social Responsibility Project</li>
+                                <p><span id="technologySpan">Technologies and Tools : OpenERP, Python and PostgreSQL</span></p>
+                                <p>
+                                    <ul class="workInfo">
+                                        <li>A project for an NGO named Keystone Foundation</li>
+                                        <li>Developed an Inventory Management application(using OpenERP)</li>
+                                    </ul>
+                                </p>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
         </div>
     </body>
     <script src="script.js"></script>

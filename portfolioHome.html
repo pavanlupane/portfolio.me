@@ -10,10 +10,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="tinycarousel.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdn.rawgit.com/morr/jquery.appear/master/jquery.appear.js"></script>
         <script type="text/javascript">
 		$(document).ready(function()
 		{
 			$('#slider1').tinycarousel();
+            
 		});
 	   </script>
         
@@ -241,7 +243,8 @@
                 font-size: 15px;
             }
             .workDiv{
-                height: 100vh;
+                /*height: 100vh;*/
+                height: 700px;
                 width: 100%;
                 padding-top: 177px; 
                 text-align: center;
@@ -291,7 +294,59 @@
             .empName #workDate{
                 font-size:14px;
             }
-            /**********Start of media query**********/
+            .skillsDiv{
+                /*height: 100vh;*/
+                height: 800px;
+                width: 100%;
+                padding-top: 177px; 
+                text-align: center;
+                background-color: #404040;
+                font-family: 'PT Sans', Arial, sans-serif;
+                color: white;
+            }
+            #skillsDataDiv{
+                height: 400px;
+                border-radius: 25px;
+                border: 1px solid white;
+                background :rgba(0,0,0,0.3);
+            }
+            #skillsMeter{
+                position: fixed;
+                top: 177px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 340px;
+                height: 90px;
+                background :rgba(0,0,0,0.3);
+                border-radius: 25px;
+                border: 1px solid white;
+            }
+            #skillsHeader{
+                margin-bottom: 125px;
+            }
+            #expert{
+                width: 15px;
+                height: 15px;
+                background: red;
+                
+            }
+            #expert1{
+                width: 15px;
+                height: 15px;
+                background: green;
+                margin-left: 50%;
+                margin-right: 50%;
+            }
+            .skillsTitle{
+                font-size: 20px;
+                padding-top: 25px;
+            }
+            .skillsDataDiv ul li{
+                font-size: 15px;
+                text-align: left;
+                padding: 10px 0px 10px 10px;
+            }
+            /***************************************Start of media query*********************************/
             @media screen and (max-width: 1130px){
                 .aboutMeLeft{
                 width: 40%;
@@ -393,6 +448,10 @@
             }
             
             @media screen and (max-width: 800px) {
+                
+             #skillsMeter{
+                top: 275px;
+            }
 
             .empName img.workImg{
                 height:37px;
@@ -550,6 +609,9 @@
                     }
             }
             @media only screen and (max-width : 600px) {
+                #skillsMeter{
+                    top: 145px;
+                }
                 
                  .empName img.workImg{
                     height:35px;
@@ -699,7 +761,7 @@
                             <li><a href="#educationDiv">EDUCATION</a></li>
                             <li><a href="#projectDiv">PROJECTS</a></li>
                             <li><a href="#workDiv">WORK</a></li>
-                            <li><a href="#">SKILLS</a></li>
+                            <li><a href="#skillsDiv">SKILLS</a></li>
                             <li><a href="#">TRAVEL</a></li>
                             <li><a href="#">CONTACT ME</a></li>  
                     </ul>
@@ -925,6 +987,56 @@
                 </div>
             </div>
     
+        </div>
+        <hr>
+        <div class="skillsDiv" id="skillsDiv">
+            <div class="skillsMeter" id="skillsMeter">
+                <p>Skills Meter</p>
+                <p>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="expert"></pre><span>Advanced</span></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="expert1"></pre><span>Proficient</span></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="expert"></pre><span>Intermediate</span></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="expert"></pre><span>Beginner</span></div>
+                </p>
+            </div>
+            <div class="skillsHeader" id="skillsHeader">
+                <p><h1>Skills starts here!</h1></p>
+            </div>
+            <div class="skillsDivContainer" id="skillsDivContainer">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="skillsLeft">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="skillsL1">
+                        <div class="skillsDataDiv" id="skillsDataDiv">
+                            <p class="skillsTitle">Programming Languages</p>
+                            <ul>
+                                <li>Java<pre id="expert"></pre></li>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>HTML5/CSS3</li>
+                                <li>PHP</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="skillsL2">
+                        <div class="skillsDataDiv" id="skillsDataDiv">
+                            <p class="skillsTitle">Databases</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="skillsRight">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="skillsR1">
+                        <div class="skillsDataDiv" id="skillsDataDiv">
+                            <p class="skillsTitle">Technologies</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="skillsR2">
+                        <div class="skillsDataDiv" id="skillsDataDiv">
+                            <p class="skillsTitle">Frameworks and Tools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     <script src="script.js"></script>

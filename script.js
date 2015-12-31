@@ -14,4 +14,16 @@ $(function() {
         menu.removeAttr('style');
     }
     }); 
+    
+    var myRepeatFunction = function (){
+                if($("#skillsDivContainer").offset().top < $(window).scrollTop() + $(window).outerHeight()) {
+                    //console.log('True');
+                    $('#skillsMeter').show();
+                    
+                } else {
+                   // console.log('False');
+                    $('#skillsMeter').hide();
+                }
+            };
+            setInterval(myRepeatFunction, 300);
 });

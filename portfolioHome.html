@@ -71,6 +71,7 @@
                 width: 100%;
                 position: fixed;
                 z-index: 999;
+                display: flex;   
             }
             nav {
                 height: 170px;
@@ -142,9 +143,9 @@
                 -webkit-border-radius: 80px;
                 border-radius: 80px;
             }
-            .menuClass{
+            /*.menuClass{
              display: flex;   
-            }
+            }*/
             .navDiv{
                 padding: 0;
                 flex: 1;
@@ -281,7 +282,7 @@
             }
             .empName img.workImg{
                 height:40px;
-                width: 270px;
+                width: 220px;
                 margin-top:10px;
             }
             .empName #workName{
@@ -305,7 +306,7 @@
                 color: white;
             }
             #skillsDataDiv{
-                height: 400px;
+                height: 390px;
                 border-radius: 25px;
                 border: 1px solid white;
                 background :rgba(0,0,0,0.3);
@@ -317,34 +318,59 @@
                 transform: translate(-50%, 0);
                 width: 340px;
                 height: 90px;
-                background :rgba(0,0,0,0.3);
+                /*background :rgba(0,0,0,0.3);*/
+                background-color: #404040;
                 border-radius: 25px;
                 border: 1px solid white;
+                z-index: 1;
             }
             #skillsHeader{
                 margin-bottom: 125px;
             }
-            #expert{
+            #advanced{
                 width: 15px;
                 height: 15px;
-                background: red;
+                background: #006666;
                 
             }
-            #expert1{
+            #proficient{
                 width: 15px;
                 height: 15px;
-                background: green;
-                margin-left: 50%;
-                margin-right: 50%;
+                background: #009999;
+            }
+            #intermediate{
+                width: 15px;
+                height: 15px;
+                background: #00cc99;
+                
+            }
+             #beginner{
+                width: 15px;
+                height: 15px;
+                background: #99ffcc;
+                
             }
             .skillsTitle{
                 font-size: 20px;
                 padding-top: 25px;
+                font-weight: bold;
             }
             .skillsDataDiv ul li{
                 font-size: 15px;
                 text-align: left;
-                padding: 10px 0px 10px 10px;
+                padding: 10px 0px 10px 0px;
+                list-style-type: none;
+            }
+            #skillsListWrapper{
+                display: flex;
+                
+            }
+            #skillsList1{
+                width: 50%;
+            }
+            #skillsList2{
+                flex: 1;
+                padding-left: 25%;
             }
             /***************************************Start of media query*********************************/
             @media screen and (max-width: 1130px){
@@ -383,6 +409,10 @@
             }
             
             @media screen and (max-width: 1000px){
+            .skillsDiv{
+                /*height: 100vh;*/
+                height: 1160px;
+            }
             
             .barclaysContainer{
                 display: flex;  
@@ -448,6 +478,11 @@
             }
             
             @media screen and (max-width: 800px) {
+            .skillsDiv{
+                /*height: 100vh;*/
+                height: 1300px;
+                padding-top: 275px; 
+            }
                 
              #skillsMeter{
                 top: 275px;
@@ -609,6 +644,11 @@
                     }
             }
             @media only screen and (max-width : 600px) {
+                .skillsDiv{
+                    /*height: 100vh;*/
+                    height: 1910px;
+                    padding-top: 145px;
+                }
                 #skillsMeter{
                     top: 145px;
                 }
@@ -993,10 +1033,10 @@
             <div class="skillsMeter" id="skillsMeter">
                 <p>Skills Meter</p>
                 <p>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="expert"></pre><span>Advanced</span></div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="expert1"></pre><span>Proficient</span></div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="expert"></pre><span>Intermediate</span></div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="expert"></pre><span>Beginner</span></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="advanced"></pre><span>Advanced</span></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="proficient"></pre><span>Proficient</span></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="intermediate"></pre><span>Intermediate</span></div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><pre id="beginner"></pre><span>Beginner</span></div>
                 </p>
             </div>
             <div class="skillsHeader" id="skillsHeader">
@@ -1008,19 +1048,24 @@
                         <div class="skillsDataDiv" id="skillsDataDiv">
                             <p class="skillsTitle">Programming Languages</p>
                             <ul>
-                                <li>Java<pre id="expert"></pre></li>
-                                <li>C</li>
-                                <li>C++</li>
-                                <li>Python</li>
-                                <li>JavaScript</li>
-                                <li>HTML5/CSS3</li>
-                                <li>PHP</li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">Java</div><div id="skillsList2"><pre id="advanced"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">C, C++</div><div id="skillsList2"><pre id="proficient"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">Python</div><div id="skillsList2"><pre id="intermediate"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">JavaScript</div><div id="skillsList2"><pre id="advanced"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">HTML5/CSS3</div><div id="skillsList2"><pre id="advanced"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">PHP</div><div id="skillsList2"><pre id="proficient"></pre></div></div></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="skillsL2">
                         <div class="skillsDataDiv" id="skillsDataDiv">
                             <p class="skillsTitle">Databases</p>
+                            <ul>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">MySQL</div><div id="skillsList2"><pre id="advanced"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">Oracle 10g</div><div id="skillsList2"><pre id="intermediate"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">NoSQL (CouchDB)</div><div id="skillsList2"><pre id="intermediate"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">PostgreSQL</div><div id="skillsList2"><pre id="intermediate"></pre></div></div></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1028,11 +1073,22 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="skillsR1">
                         <div class="skillsDataDiv" id="skillsDataDiv">
                             <p class="skillsTitle">Technologies</p>
+                            <ul>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">Android</div><div id="skillsList2"><pre id="proficient"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">Map Reduce</div><div id="skillsList2"><pre id="intermediate"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">Apache Spark</div><div id="skillsList2"><pre id="beginner"></pre></div></div></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="skillsR2">
                         <div class="skillsDataDiv" id="skillsDataDiv">
                             <p class="skillsTitle">Frameworks and Tools</p>
+                             <ul>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">JQuery</div><div id="skillsList2"><pre id="proficient"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">Bootstrap</div><div id="skillsList2"><pre id="advanced"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">JUnit</div><div id="skillsList2"><pre id="intermediate"></pre></div></div></li>
+                                <li><div id="skillsListWrapper"><div id="skillsList1">Apache Maven</div><div id="skillsList2"><pre id="proficient"></pre></div></div></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -11,15 +11,15 @@
         <link rel="stylesheet" href="tinycarousel.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="https://cdn.rawgit.com/morr/jquery.appear/master/jquery.appear.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script type="text/javascript">
+        
 		$(document).ready(function()
 		{
 			$('#slider1').tinycarousel();
             
 		});
 	   </script>
-        
-        
         <style>
             .firstPageDiv{
                 height: 100vh;
@@ -383,6 +383,74 @@
                 background-color: #404040;
                 font-family: 'PT Sans', Arial, sans-serif;
                 color: white; 
+                padding-top: 40%;
+            }
+            .contactDiv{
+                height: 1000px;
+                width: 100%;
+                padding-top: 177px; 
+                text-align: center;
+                background-color: #404040;
+                font-family: 'PT Sans', Arial, sans-serif;
+                color: white; 
+            }
+            #contactLeft{
+                height: 800px;
+                /*border: 1px solid white;*/
+                text-align: left;
+                padding-left: 100px;
+                padding-top: 50px;
+                padding-right: 50px;
+            }
+            #contactRight{
+                height: 800px;
+                /*border: 1px solid white;*/
+            }
+            #contactLeft #contactText{
+                font-size:18px;
+            }
+            #contactLeft #contactTitle{
+                font-size:32px;
+            }
+            #contactSocail{
+                margin-top: 20px;
+                height: 90px;
+                width: 340px;
+                border: 1px solid white;
+                border-radius: 25px;
+                /*background :rgba(0,0,0,0.3);*/
+                padding-left: 10px;
+            }
+            .socialImg{
+                height: 30px;
+                width: 30px;
+                margin: 30px 10px 10px 10px;
+                color: white; 
+            }
+            #googleMap{
+                margin-top: 35px;
+                height: 250px;
+                background:rgba(0,0,0,0.3);
+            }
+            #replyFormDiv{
+                margin-top: 100px;
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-top: 50px;
+                height: 600px;
+               /* background:rgba(0,0,0,0.5);*/
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+            }
+            #inputField{
+                width: 100%;
+                height: 45px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 5px 5px 5px 10px;
+                background: rgba(0,0,0,0.3);
+                font-size: 18px;
+                border: none;
             }
             /***************************************Start of media query*********************************/
             @media screen and (max-width: 1130px){
@@ -821,8 +889,8 @@
                             <li><a href="#projectDiv">PROJECTS</a></li>
                             <li><a href="#workDiv">WORK</a></li>
                             <li><a href="#skillsDiv">SKILLS</a></li>
-                            <li><a href="#">TRAVEL</a></li>
-                            <li><a href="#">CONTACT ME</a></li>  
+                            <li><a href="#travelDiv">TRAVEL</a></li>
+                            <li><a href="#contactDiv">CONTACT</a></li>  
                     </ul>
                         <a href="#" id="pull">Menu</a>
                 </nav>
@@ -1115,7 +1183,45 @@
         </div>
         <hr>
         <div class="travelDiv" id="travelDiv">
-            
+            <h3>This window is having a makeover... Please come back soon... :)</h3>
+        </div>
+        <hr>
+        <div class="contactDiv" id="contactDiv">
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12" id="contactLeft">
+                <p><span id="contactTitle">Contact</span></p>
+                <p><span id="contactText">Get in touch with me if you would like to do business together, share an idea or just say hello.</span></p>
+                <p>
+                    <div class="contactSocail" id="contactSocail">
+                        <a href="https://www.linkedin.com/in/pavanlupane"><img class="socialImg" src="res/social/linkedin.png" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></a>
+                        <a href="https://github.com/pavanlupane"><img class="socialImg" style="height:24px; width:24px;" src="res/github-2.png" data-toggle="tooltip" data-placement="bottom" title="Github"></a>
+                        <a href="https://www.facebook.com/pavan.lupane"><img class="socialImg" src="res/social/fb2.png" data-toggle="tooltip" data-placement="bottom" title="Facebook"></a>
+                        <a href="https://www.google.com/+PavanLupane"><img class="socialImg" src="res/social/g+.png" data-toggle="tooltip" data-placement="bottom" title="Google Plus"></a>
+                        <a href="https://www.instagram.com/pavanlupane/"><img class="socialImg" src="res/social/insta.png" data-toggle="tooltip" data-placement="bottom" title="Instagram"></a>
+                        <a href="https://www.pinterest.com/pavanlupane/"><img class="socialImg" src="res/social/pint.png" data-toggle="tooltip" data-placement="bottom" title="Pinterest"></a>
+                        
+                    </div>
+                </p>
+                <p style="padding-top:20px;"><span class="glyphicon glyphicon-map-marker" style="font-size: 20px; margin-right:25px;"></span><span id="contactText">2353 Portland Street, Apt #2</span></p>
+                <p style="padding-left:45px;"><span id="contactText">Los Angeles, California</span></p>
+                <p style="padding-top:10px;"><span class="glyphicon glyphicon-earphone" style="font-size: 20px; margin-right:25px;"></span><span id="contactText">+1 (213) 2848615</span></p>
+                <p style="padding-top:10px;"><span class="glyphicon glyphicon-envelope" style="font-size: 20px; margin-right:25px;"></span><span id="contactText">lupane@usc.edu</span></p>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="googleMap"></div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12" id="contactRight">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" id="replyFormDiv">
+                    <p><span class="glyphicon glyphicon-send" style="font-size: 30px; margin-right:25px;"></span><span style="font-size:25px;">Shoot a Quick Message</span></p>
+                    <p>
+                        <form action="sendMail.php" method="post" id="contactForm">
+                            <input type="text" id="inputField" name="your_name" placeholder="Your name">
+                            <input type="email" id="inputField" name="your_email" placeholder="Your email address">
+                            <textarea id="inputField" name="your_message" placeholder="Your message" form="contactForm" maxlength="500" style="height:250px;"></textarea>
+                            <button type="submit" name="submit" value="submit" class="btn btn-default" form="contactForm" style="width:100%; margin-top:10px;">Send</button>
+                        </form>
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" id="contactHologram">
+                </div>
+            </div>
         </div>
     </body>
     <script src="script.js"></script>

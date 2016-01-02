@@ -56,5 +56,25 @@ function mapInitialize() {
 
 //google.maps.event.addDomListener(window, 'load', mapInitialize);
     mapInitialize();
+    
+function shootEmailFunction(){
+    //alert("Form submitted!");
+    //console.log( $("#myForm").serialize() );
+    var that = $("#contactForm"),
+        url=that.attr('action'),
+        method=that.attr('method'),
+        data=that.serializeArray();
+
+    console.log( data );
+
+    $.ajax({
+        url: url,
+        type: method,
+        data: data,
+        success: function(response){
+            alert("Success!");
+        }
+    });
+}
 });
 

@@ -4,6 +4,14 @@
         <meta charset="utf-8">
         <meta name="description" content="This is my portfolio website web page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FB sharing webmasters content-->
+        <meta property="fb:app_id" content="1548285002159385" />
+        <meta property="og:url" content="http://www-scf.usc.edu/~lupane/portfolioHome.html" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="Pavan's Portfolio Website" />
+        <meta property="og:description" content="Hello! Please take few minutes of your time to visit Pavan's portfolio website. Thank you!" />
+        <meta property="og:image" content="http://res.cloudinary.com/pavanlupane/image/upload/v1451782908/pavanlupane_pk9wmr.jpg" />
+        <!-- FB sharing webmasters content end-->
         <title>PL.portfolio</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -414,7 +422,7 @@
             }
             #contactSocail{
                 margin-top: 20px;
-                height: 90px;
+                height: 165px;
                 width: 340px;
                 border: 1px solid white;
                 border-radius: 25px;
@@ -455,6 +463,12 @@
              #contactRight #msgTitle{
                     font-size:25px;
                 }
+            .contactSocail .fb-like{
+                margin-top: 10px;
+                padding-left: 20px;
+                height: 100px;
+                color: white;
+            }
             /***************************************Start of media query*********************************/
             @media screen and (max-width: 1130px){
                 .aboutMeLeft{
@@ -947,6 +961,18 @@
         </style>
     </head>
     <body>
+        <!----------- Facebook Like and Share Code --------------->
+        <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1548285002159385";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            </script>
+        <!----------- Facebook Code end --------------->
+        
         <div class="firstPageDiv">
             <div class="menuClass">  
                 <div class="logoDivWrapper">
@@ -1272,7 +1298,18 @@
                         <a href="https://www.google.com/+PavanLupane"><img class="socialImg" src="http://res.cloudinary.com/pavanlupane/image/upload/v1451725864/g_pz77zs.png" data-toggle="tooltip" data-placement="bottom" title="Google Plus"></a>
                         <a href="https://www.instagram.com/pavanlupane/"><img class="socialImg" src="http://res.cloudinary.com/pavanlupane/image/upload/v1451725837/insta_pbmd21.png" data-toggle="tooltip" data-placement="bottom" title="Instagram"></a>
                         <a href="https://www.pinterest.com/pavanlupane/"><img class="socialImg" src="http://res.cloudinary.com/pavanlupane/image/upload/v1451725929/pint_xr0sv7.png" data-toggle="tooltip" data-placement="bottom" title="Pinterest"></a>
-                        
+                    <p>
+                        <!-- like button code -->
+                        <div class="fb-like"
+                             data-href="http://www-scf.usc.edu/~lupane/portfolioHome.html"
+                             data-width="300" 
+                             data-layout="standard" 
+                             data-action="like"
+                             data-show-faces="true" 
+                             data-share="true"
+                             data-colorscheme="dark">
+                        </div>
+                    </p> 
                     </div>
                 </p>
                 <p style="padding-top:20px;"><span class="glyphicon glyphicon-map-marker" style="font-size: 20px; margin-right:25px;"></span><span id="contactText">2353 Portland Street, Apt #2</span></p>

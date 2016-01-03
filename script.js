@@ -15,6 +15,11 @@ $(function() {
     }
     }); 
     
+    $('#resumeBtn').click(function(e) {
+    e.preventDefault();  //stop the browser from following
+    window.location.href = 'Pavan_Lupane_Resume.pdf';
+});
+    
     var myRepeatFunction = function (){
                if(($("#skillsDivContainer").offset().top < $(window).scrollTop() + $(window).outerHeight() - 200) &&
                       ($("#travelDiv").offset().top > $(window).scrollTop() + $(window).outerHeight()-400)) {

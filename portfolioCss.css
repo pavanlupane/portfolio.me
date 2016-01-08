@@ -1,6 +1,10 @@
-body{
-               font-family: 'PT Sans', Futura,Optima, Arial, sans-serif;
-                
+            body{
+                   font-family: 'PT Sans', Futura,Optima, Arial, sans-serif;
+
+                }
+            hr{
+                margin: 0;
+                border: 1px solid #808080;
             }
             .firstPageDiv{
                 height: 100vh;
